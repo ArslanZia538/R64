@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    {% load staticfiles %}
+     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>R64 - Select Multi Payee</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/logo.jpg' %}">
+    <!-- Custom Stylesheet -->
+	<link href="{% static 'vendor/bootstrap-select/dist/css/bootstrap-select.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="h-100">
+
+    <div id="preloader">
+        <div class="sk-three-bounce">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+    </div>
+
+    <div class="authincation h-100">
+        <div class="container h-100">
+            <div class="row justify-content-center h-100 align-items-center">
+                <div class="col-md-6">
+                    <ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="dashboardR">Dashboard</a></li>
+						<li class="breadcrumb-item active"><a href="javascript:void(0)">Select-Bulk</a></li>
+					</ol>
+                    <div class="authincation-content">
+                        <div class="row no-gutters">
+                            <div class="col-xl-12">
+                                <div class="auth-form">
+									<div class="text-center mb-3">
+										<a href="index.html"><img src="images/logo-full.png" alt=""></a>
+									</div>
+                                    <h4 class="text-center mb-4 text-white">Select No. of Payee</h4>
+                                    <form action="selectbulkUser/bulkentry" method="post">
+                                        <div class="input-group">
+                                         <select name="no" class="btn bg-white text-primary btn-block" id="inputGroupSelect02">
+                                         <option value="" selected>Choose...</option>
+                                         <option value="2">Two</option>
+                                         <option value="3">Three</option>
+                                         <option value="4">Four</option>
+                                         <option value="5">Five</option>
+                                         <option value="6">Six</option>
+                                         </select>
+                                          <div>
+                                          </div>
+                                           </div>
+
+                                        <div class="form-row d-flex justify-content-between mt-4 mb-2">
+
+                                       <!--- <input type="hidden" name="page" value="page"> -->
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit" class="btn bg-white text-primary btn-block">Submit</button>
+                                        </div>
+                                    </form>
+                                    <div class="new-account mt-3">
+                                                    {% if messages %}
+                                                      {% for message in messages %}
+                                                              <div class="alert alert-info" role="alert">
+                                                              {{ message }}
+                                                              </div>
+                                                      {% endfor %}
+                                                    {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="{% static 'vendor/global/global.min.js' %}"></script>
+	<script src="{% static 'vendor/bootstrap-select/dist/js/bootstrap-select.min.js' %}"></script>
+    <script src="{% static 'js/custom.min.js' %}"></script>
+	<script src="{% static 'js/deznav-init.js' %}"></script>
+
+    <!-- Jquery Validation -->
+    <script src="{% static 'vendor/jquery-validation/jquery.validate.min.js' %}"></script>
+    <!-- Form validate init -->
+    <script src="{% static 'js/plugins-init/jquery.validate-init.js' %}"></script>
+
+</body>
+
+</html>
